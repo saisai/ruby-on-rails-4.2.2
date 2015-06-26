@@ -1,0 +1,2 @@
+module SgjobsdbHelper
+end

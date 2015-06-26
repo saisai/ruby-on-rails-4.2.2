@@ -1,0 +1,2 @@
+module NewsycombinatorcomHelper
+end

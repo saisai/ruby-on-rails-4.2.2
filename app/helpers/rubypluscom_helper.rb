@@ -1,0 +1,2 @@
+module RubypluscomHelper
+end

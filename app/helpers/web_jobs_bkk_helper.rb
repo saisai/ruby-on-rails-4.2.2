@@ -1,0 +1,2 @@
+module WebJobsBkkHelper
+end

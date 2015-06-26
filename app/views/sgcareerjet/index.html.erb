@@ -1,0 +1,32 @@
+<h1><%= content_for(:title, "Career Jet") %></h1>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>No</th>
+		<th>Title</th>
+		<th>Time</th>
+	</tr>
+</thead>
+<tbody>
+	<% if params[:page].to_i == 0 %>
+	<% id = 1 %>
+	<% elsif params[:page].to_i == 1  %>
+	<% id =  1 %>
+	<% elsif params[:page].to_i > 1 %>
+	<% result = params[:page].to_i - 1 %>
+	<% id = (WillPaginate.per_page  * result ) + 1 %>
+	<% end %>
+	<% @jobsdb.each do |test| %>
+	<tr>
+		<td><%= id %></td>
+		<td><a href="<%= test.link %>" target="_blank"><%= test.title %></a></td>
+		<td><%= test.time %></td>
+	</tr>
+	<% id += 1 %>
+	<% end %>
+</tbody>
+
+</table>
+<div class="text-center">
+		<%= will_paginate @jobsdb, renderer: BootstrapPagination::Rails %>
+</div>

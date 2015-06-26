@@ -1,0 +1,2 @@
+module SgstjobsHelper
+end

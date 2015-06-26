@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+	<title><%= yield(:title) %></title>
+  <%= stylesheet_link_tag 'bootstrap.min.css' %>
+	<%= javascript_include_tag 'jquery.min.js', 'bootstrap.min.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+				
+				<!-- menu -->
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						
+						<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">Category <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="#">Add Data</a></li>
+								<li><a href="#">List</a></li>                
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('list-post') }}">Posts <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="#">Add Data</a></li>
+								<li><a href="#">List</a></li>                
+							</ul>
+						</li>  						
+						
+					<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('site') }}">To Do List <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="#">Add Data</a></li>
+								<li><a href="#">List</a></li>                
+							</ul>
+						</li>								
+						
+						<li class="dropdown">
+							<a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Thai <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="/welcome/index">Jobs DB</a></li>
+								<li><a href="/jobsthai/index">Jobs Thai</a></li>
+								<li><a href="/jobsbkk/index">Jobs Bkk</a></li>
+								<li><a href="/jobstopgun/index">Jobs Top Gun</a></li>
+								<li><a href="/web_jobs_bkk/index">Web Jobs Bangkok</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">SG <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="/sgjobsdb/index">Jobs Db</a></li>
+								<li><a href="/sgjobscentral/index">Jobs Central</a></li>
+								<li><a href="/sgmonster/index">Jobs Monster</a></li>
+								<li><a href="/sgstjobs/index">Jobs St</a></li>
+								<li><a href="/sggumtree/index">Jobs Gumtree</a></li>
+								<li><a href="/sgindeed/index">Jobs Indeed</a></li>
+								<li><a href="/sgmegajobs/index">Jobs Rapido</a></li>
+								<li><a href="/sgcareerjet/index">Jobs Career Jet</a></li>
+								<li><a href="/sgjobsonline/index">Jobs On Line</a></li>
+
+							</ul>
+						</li>
+						
+						<li class="dropdown">
+							<a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Web Sites <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="/toptal/index">Toptal dot com</a></li>
+								<li><a href="/raywnderlichcom/index">Raywnderlich dot com</a></li>
+								<li><a href="/newsycombinatorcom/index">news.ycombinator.com.news</a></li>
+								<li><a href="/codeactivestatecompython/index">code-activestate-com-python</a></li>
+								<li><a href="/w3facilityorg/index">W3facility.org</a></li>
+								<li><a href="/unixstackexchangecom/index">unixstackexchangecom</a></li>
+								<li><a href="/seradionet/index">se-radio.net</a></li>
+								<li><a href="/ibm/index">ibm.com</a></li>
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">stackoverflow.com <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="/englishstackexchange/index">english</a></li>
+								<li><a href="/stackoverflowcomdjango/index">django</a></li>
+								<li><a href="/stackoverflowcompython/index">python</a></li>
+								<li><a href="/ruby-on-rails-4">ruby on rails 4</a></li>
+								<li><a href="/rubyflowdotcom/index">ruby flow dot com</a></li>
+								<li><a href="/rubyplus-com">rubypluscom</a></li>								
+							</ul>
+						</li>								
+						 
+					</ul>
+				</div>
+				<!-- menu end -->
+				
+				
+       <!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+
+    <div class="container">
+      
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+
+</body>
+</html>
